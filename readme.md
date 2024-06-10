@@ -4,6 +4,7 @@
 This project demonstrates the deployment of a machine learning model using NVIDIA Triton Inference Server on an RTX 3060 12GB GPU. It includes setting up the Triton server, preparing the model for deployment, making inference requests, and preprocessing images.
 
 ## Prerequisites
+- Anaconda(For Virtual Environment, Install cuda and cudnn from conda)
 - Docker installed on your system
 - NVIDIA Docker support (check for nvidia driver and docker version compatibility , sometimes cuda dont work)
 - Python 3.11
@@ -220,7 +221,7 @@ for class_id in top5_class_ids:
     score = probabilities[class_id]
     print(f"CLASS: [{categories[class_id]:<{padding_str_width}}]\t: SCORE [{score*100:.2f}%]")
 
-# == Step 7: You can now order and enjoy a pizza, this tutorial has been quite long :) ==
+# Finish..
 ```
 
 ### Explanation
@@ -240,6 +241,19 @@ for class_id in top5_class_ids:
    - Unpacks and processes the server response.
    - Applies softmax to the output for classification.
    - Retrieves and prints the top 5 prediction labels and their scores.
+
+**The Output We Get By Running The Script**:
+```
+(nvdiaTritonServer_env) E:\Github\triton_server_ImageModel>python playground.py
+
+Inference outputs (TOP5):
+=========================
+CLASS: [pizza     ]     : SCORE [99.96%]
+CLASS: [frying pan]     : SCORE [0.01%]
+CLASS: [plate     ]     : SCORE [0.01%]
+CLASS: [king crab ]     : SCORE [0.00%]
+CLASS: [hotdog    ]     : SCORE [0.00%]
+```
 
 ## Conclusion
 This documentation provides a comprehensive guide to deploying a machine learning model using NVIDIA Triton Inference Server. It covers downloading and configuring the model, setting up and running the server, and making inference requests with preprocessing. By following these steps, you can effectively deploy and utilize machine learning models with Triton Server on an RTX 3060 12GB GPU.
