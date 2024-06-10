@@ -136,10 +136,10 @@ Collecting metrics for GPU 0: NVIDIA GeForce RTX 3060
 Now Your Triton Server is Running as a service in Docker.
 We can check if it works correctly by sending inference requests to the server, for this we will create a script.
 
-## Inference Script: `playground.py`
-The `playground.py` script preprocesses images and sends inference requests to the Triton Server.
+## Inference Script: `InferenceScript.py`
+The `InferenceScript.py` script preprocesses images and sends inference requests to the Triton Server.
 
-### `playground.py` File Explanation
+### `InferenceScript.py` File Explanation
 ```python
 import tritonclient.http as httpclient
 import numpy as np
@@ -244,7 +244,7 @@ for class_id in top5_class_ids:
 
 **The Output We Get By Running The Script**:
 ```
-(nvdiaTritonServer_env) E:\Github\triton_server_ImageModel>python playground.py
+(nvdiaTritonServer_env) E:\Github\triton_server_ImageModel>python InferenceScript.py
 
 Inference outputs (TOP5):
 =========================
