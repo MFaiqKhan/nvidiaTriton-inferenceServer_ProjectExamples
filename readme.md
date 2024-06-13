@@ -256,4 +256,4 @@ CLASS: [hotdog    ]     : SCORE [0.00%]
 ```
 
 ## Conclusion
-This documentation provides a comprehensive guide to deploying a machine learning model using NVIDIA Triton Inference Server. It covers downloading and configuring the model, setting up and running the server, and making inference requests with preprocessing. By following these steps, you can effectively deploy and utilize machine learning models with Triton Server on an RTX 3060 12GB GPU.
+This documentation provides a comprehensive guide to deploying a machine learning model using NVIDIA Triton Inference Server. It covers downloading and configuring the model, setting up and running the server, and making inference requests with preprocessing. By following these steps, you can effectively deploy and utilize machine learning models with Triton Server.
